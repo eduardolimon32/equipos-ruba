@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO básico -->
+  <title>Catálogo | Equipos Ruba</title>
+  <meta name="description" content="Catálogo de Equipos Ruba, distribuidor Wintek en Aguascalientes: rampas, equipo de llantas, alineación, gatos y herramienta. Cotiza por WhatsApp.">
+
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title"       content="Catálogo | Equipos Ruba">
+  <meta property="og:description" content="Catálogo de Equipos Ruba, distribuidor Wintek en Aguascalientes: rampas, equipo de llantas, alineación, gatos y herramienta. Cotiza por WhatsApp.">
+  <meta property="og:image"       content="img/logo-ruba.png">
+  <meta property="og:type"        content="website">
+
+  <!-- Tipografía: Archivo (una sola familia, usamos su ancho variable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <!-- [PENDIENTE: favicon] -->
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header">
+    <div class="contenedor">
+      <nav class="nav-inner" aria-label="Navegación principal">
+        <a href="index.html" class="nav-logo">
+          <img src="img/logo-ruba-chico.png" alt="Equipos Ruba, ir al inicio" width="97" height="52">
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+                <a href="https://wa.me/524492601458?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20equipos." class="btn btn-rojo btn-chico nav-cta" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35z"/><path d="M12 0C5.37 0 0 5.37 0 12c0 2.14.56 4.14 1.54 5.87L.06 23.89a.5.5 0 00.61.61l6.01-1.48A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm0 22c-1.95 0-3.77-.53-5.33-1.44l-.38-.23-3.94.97.97-3.94-.23-.38A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg> Cotizar
+        </a>
+
+        <button class="nav-hamburguesa" id="nav-hamburguesa" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagina-encabezado" aria-labelledby="cat-h1">
+      <div class="contenedor">
+        <h1 id="cat-h1">Catálogo</h1>
+        <p>Elige una categoría o busca por nombre o modelo. Los precios son de promoción y pueden cambiar; para confirmar precio y disponibilidad, toca «Cotizar».</p>
+      </div>
+    </section>
+
+    <section class="seccion catalogo-seccion" aria-label="Productos">
+      <div class="contenedor">
+        <div class="filtros-barra" role="search">
+          <div class="buscador">
+            <label for="busqueda-input" class="visualmente-oculto">Buscar productos</label>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <input type="search" id="busqueda-input" placeholder="Buscar por nombre o modelo…" autocomplete="off">
+          </div>
+          <!-- Los botones los genera catalogo.js -->
+          <div class="filtros-categorias" id="filtros-categorias" role="group" aria-label="Filtrar por categoría"></div>
+        </div>
+
+        <p class="catalogo-cuenta" id="catalogo-cuenta" aria-live="polite"></p>
+        <div class="productos-grid" id="catalogo-grid"></div>
+      </div>
+    </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section id="cta" aria-labelledby="cta-titulo">
+    <div class="contenedor cta-inner">
+      <div>
+        <h2 id="cta-titulo">¿Qué equipo le falta a tu taller?</h2>
+        <p>Mándanos un mensaje con lo que buscas y te cotizamos.</p>
+      </div>
+            <a href="https://wa.me/524492601458?text=Hola%2C%20quiero%20cotizar%20equipo%20para%20mi%20taller." class="btn btn-blanco" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35z"/><path d="M12 0C5.37 0 0 5.37 0 12c0 2.14.56 4.14 1.54 5.87L.06 23.89a.5.5 0 00.61.61l6.01-1.48A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm0 22c-1.95 0-3.77-.53-5.33-1.44l-.38-.23-3.94.97.97-3.94-.23-.38A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg> Escribir por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="img/logo-ruba-chico.png" alt="Equipos Ruba" width="150" height="81">
+          <p>Distribuidor autorizado Wintek. Equipo para talleres mecánicos en Aguascalientes.</p>
+        </div>
+
+        <div class="footer-col">
+          <h2>Sitio</h2>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2>Contacto</h2>
+          <ul>
+            <li><a href="tel:+524492601458">449 260 14 58</a></li>
+            <li><a href="https://wa.me/524492601458?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20equipos." target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:mruvalcaba0171@gmail.com">mruvalcaba0171@gmail.com</a></li>
+            <li>Aguascalientes, México</li>
+            <!-- [PENDIENTE: dirección del local (confirmar si es la misma de facturación) y horarios] -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <p>© 2026 Equipos Ruba</p>
+        <p>Sitio hecho por <a href="#">Limon Co®</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/524492601458?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20equipos." class="wa-flotante" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35z"/><path d="M12 0C5.37 0 0 5.37 0 12c0 2.14.56 4.14 1.54 5.87L.06 23.89a.5.5 0 00.61.61l6.01-1.48A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm0 22c-1.95 0-3.77-.53-5.33-1.44l-.38-.23-3.94.97.97-3.94-.23-.38A9.94 9.94 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg>
+  </a>
+
+  <script src="js/productos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Archivos internos de desarrollo — no publicar
+.claude/
+material-cliente/
+version-anterior/
+CLAUDE.md
+skills-lock.json
+skills-lock.json.lock
+skills-lock.json.lock.*
+Logo.jpeg
+.DS_Store
